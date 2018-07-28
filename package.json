@@ -1,0 +1,45 @@
+{
+  "name": "lp-filtering",
+  "version": "14.0.0",
+  "private": true,
+  "description": "LP with tag filtering",
+  "devDependencies": {
+    "autoprefixer": "8.5.x",
+    "browser-sync": "^2.23.7",
+    "gulp": "3.9.x",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lapitskaya/lp-filtering.git"
+  },
+  "author": "Elena Lapitskaya",
+  "scripts": {
+    "build": "gulp style",
+    "start": "gulp serve"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "src/*.html",
+    "src/js/**/*.js",
+    "src/img/**/*.svg",
+    "src/sass/**/*.{sass,scss}"
+  ],
+  "engines": {
+    "node": "8.11"
+  },
+  "dependencies": {
+    "hoek": "^5.0.3",
+    "jquery": "^3.3.1",
+    "npm": "^6.2.0"
+  }
+}

@@ -1,0 +1,10 @@
+// import abstract styles
+@import "abstracts/variables";
+
+// import main styles
+@import "base/fonts";
+@import "base/general";
+
+// import styles for components
+@import "base/blocks/one";
+@import "base/blocks/two";
