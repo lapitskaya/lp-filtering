@@ -1,14 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi-FI">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tekij&#228;t  - Tikkurilan Tekij&#228;pankki</title>
+    <meta name="description" content="Test LP with search by tags.">
+    <meta name="author" content="Elena Lapitskaya">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!--<script type="text/javascript" src="js/jquery-3.1.0.js"></script>-->
     <script type="text/javascript" src="js/script.js"></script>
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Test</h1>
+    <header class="header">
+        <div class="header__top header-top">
+            <div class="header-top__container">
+                <a href="#"><img class="header-top__logo" src="https://placehold.it/100x100" srcset="https://placehold.it/200x200 2x" alt="main logo"></a>
+                <span class="header-top__slogan">Tekijäpankki</span>
+            </div>
+        </div>
+
+        <div class="header__menu header-menu">
+            <div class="header-menu__container">
+                <button class="header-menu__burger">
+                    <span>menu</span>
+                </button>
+
+                <div class="header-menu__menu">
+                    <nav class="header-menu__nav">
+                        <ul class="header-menu__list">
+                            <li class="header-menu__item">
+                                <a class="header-menu__link" href="#">
+                                    <img class="header-menu__home-icon" src="" alt="home">
+                                </a>
+                            </li>
+                            <li class="header-menu__item">
+                                <span class="header-menu__link header-menu__link--disabled">Tekijät</span>
+                            </li>
+                            <li class="header-menu__item">
+                                <a class="header-menu__link" href="#">Tietoa palvelusta</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <button class="header__request-btn">Pyydä tarjous</button>
+
+                    <div class="request-modal">
+                        <header class="request-modal__header">
+                            <h2 class="request-modal__heading">Pyydä tarjous</h2>
+                            <ul class="request-modal__steps">
+                                <li class="request-modal__step1">Valitse tekijät</li>
+                                <li class="request-modal__step2">Tarjouspyyntö</li>
+                            </ul>
+                            <button class="request-modal__x">x</button>
+                        </header>
+                        <div class="request-modal__content">
+                            <p class="request-modal__paragraph">Voit valita korkeintaan kolme tekijää listaltasi ja lähettää heille tarjouspyynnön.</p>
+                            <!-- full modal functionality can be completed further by request -->
+                            <button class="request-modal__submit-btn" type="submit">Seuraava</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main role="main" class="main-content">
+
+        <form>
+            <div class="form-top">
+                <div class="form-top__container">
+                    <fieldset class="form-top__search search">
+                        <legend class="search__legend">Hae</legend>
+                        <input class="search__field" id="searchField" type="search" name="q" placeholder="">
+                        <button class="search__btn" id="searchSubmit"></button>
+                    </fieldset>
+                    <fieldset class="form-top__sorting-by sorting-by">
+                        <legend class="sorting-by__legend">Lajitteluperuste</legend>
+                        <ul class="sorting-by__list">
+                            <li class="sorting-by__item">
+                                <label class="sorting-by__label">Työnäytteet</label>
+                                <input class="sorting-by__radio" type="radio" checked>
+                            </li>
+                            <li class="sorting-by__item">
+                                <label class="sorting-by__label">Nimi</label>
+                                <input class="sorting-by__radio" type="radio">
+                            </li>
+                            <li class="sorting-by__item">
+                                <label class="sorting-by__label">Palaute</label>
+                                <input class="sorting-by__radio" type="radio">
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="form-middle">
+                <fieldset class="form-middle__container tag-filter">
+                    <legend class="tag-filter__legend">Valitse maalaustyö</legend>
+                    <ul class="tag-filter__list">
+                        <li class="tag-filter__item">
+                            <label class="tag-filter__label">Terassit</label>
+                            <input class="tag-filter__checkbox" type="checkbox">
+                        </li>
+                        <li class="tag-filter__item">
+                            <label class="tag-filter__label">Katot</label>
+                            <input class="tag-filter__checkbox" type="checkbox">
+                        </li>
+                        <li class="tag-filter__item">
+                            <label class="tag-filter__label">Puujulkisivut</label>
+                            <input class="tag-filter__checkbox" type="checkbox">
+                        </li>
+                        <li class="tag-filter__item">
+                            <label class="tag-filter__label">Tasoitustyöt</label>
+                            <input class="tag-filter__checkbox" type="checkbox">
+                        </li>
+                        <li class="tag-filter__item">
+                            <label class="tag-filter__label">Efektimaalaus</label>
+                            <input class="tag-filter__checkbox" type="checkbox">
+                        </li>
+                        <li class="tag-filter__item">
+                            <label class="tag-filter__label">Sisämaalaukset</label>
+                            <input class="tag-filter__checkbox" type="checkbox">
+                        </li>
+                        <li class="tag-filter__item">
+                            <label class="tag-filter__label">Lattiat</label>
+                            <input class="tag-filter__checkbox" type="checkbox">
+                        </li>
+                        <li class="tag-filter__item">
+                            <label class="tag-filter__label">Kivijulkisivut ja sokkelit</label>
+                            <input class="tag-filter__checkbox" type="checkbox">
+                        </li>
+                        <li class="tag-filter__item">
+                            <label class="tag-filter__label">Ovet ikkunat ja kalusteet</label>
+                            <input class="tag-filter__checkbox" type="checkbox">
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div class="form-bottom">
+                <div class="form-bottom__container">
+                    <h1 class="form-bottom__title">Etsi projektiisi sopivia urakoitsijoita ja pyydä tarjous!</h1>
+                </div>
+            </div>
+
+            <output class="output">
+                <div class="output__container">
+
+                    <div class="output__no-result">'Haku ei tuottanut tuloksia'</div>
+
+                    <article class="output__item article">
+                        <img class="article__img" src="https://placehold.it/140x140" srcset="https://placehold.it/280x280 2x" alt="">
+                        <div class="article__content">
+                            <h3 class="article__heading">Tammijuuri</h3>
+                            <ul class="article__contact-info">
+                                <li class="article__contact-item article__contact-item--location">HELSINKI</li>
+                                <li class="article__contact-item article__contact-item--phone">
+                                    <a class="article__contact-link" href="tel:+358407350437">+358407350437</a>
+                                </li>
+                                <li class="article__contact-item article__contact-item--email">
+                                    <a class="article__contact-link" href="mailto:lauri@tammijuuri.fi">lauri@tammijuuri.fi</a>
+                                </li>
+                            </ul>
+                            <p class="article__description">Tammijuuri on ystävällinen ja ihmisläheinen maalausliike Helsingistä.
+                                Keskityn pääasiassa asuinhuoneistojen ja pienten liiketilojen pintakäsittelyyn. Toiminta-alueeni
+                                on pääosin pääkaupunkiseudulla. Maalarin palveluiden lisäksi teen myös tapetoinnit, laminaattilattioiden
+                                asennukset, nauhoitus-, tasoite-, ja verkotustyöt sekä pienet ulkomaalaustyöt ammattitaidolla ja
+                                asiakkaiden toiveiden ehdolla. Maalauspalvelussani huomioin ympäristön ja luonnon muun muassa
+                                kierrättämällä kaiken mahdollisen työstä aiheutuvan jätteen ja käyttämällä ympäristöystävällisiä
+                                tarvikkeita ja materiaaleja.</p>
+                            <ul class="article__tags">
+                                <li class="article__tag-item">Terassit</li>
+                                <li class="article__tag-item">Katot</li>
+                                <li class="article__tag-item">Puujulkisivut</li>
+                                <li class="article__tag-item">Tasoitustyöt</li>
+                                <li class="article__tag-item">Sisämaalaukset</li>
+                                <li class="article__tag-item">Lattiat</li>
+                                <li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
+                            </ul>
+                        </div>
+                        <div class="article__action">
+                            <button class="article__request-btn">Pyydä tarjous!</button>
+                            <div class="article__works works-counter">
+                                <img class="works-counter__icon">
+                                <span class="works-counter__number">11</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="output__item article">
+                        <img class="article__img" src="https://placehold.it/140x140" srcset="https://placehold.it/280x280 2x" alt="">
+                        <div class="article__content">
+                            <h3 class="article__heading">Tammijuuri</h3>
+                            <ul class="article__contact-info">
+                                <li class="article__contact-item article__contact-item--location">HELSINKI</li>
+                                <li class="article__contact-item article__contact-item--phone">
+                                    <a class="article__contact-link" href="tel:+358407350437">+358407350437</a>
+                                </li>
+                                <li class="article__contact-item article__contact-item--email">
+                                    <a class="article__contact-link" href="mailto:lauri@tammijuuri.fi">lauri@tammijuuri.fi</a>
+                                </li>
+                            </ul>
+                            <p class="article__description">Tammijuuri on ystävällinen ja ihmisläheinen maalausliike Helsingistä.
+                                Keskityn pääasiassa asuinhuoneistojen ja pienten liiketilojen pintakäsittelyyn. Toiminta-alueeni
+                                on pääosin pääkaupunkiseudulla. Maalarin palveluiden lisäksi teen myös tapetoinnit, laminaattilattioiden
+                                asennukset, nauhoitus-, tasoite-, ja verkotustyöt sekä pienet ulkomaalaustyöt ammattitaidolla ja
+                                asiakkaiden toiveiden ehdolla. Maalauspalvelussani huomioin ympäristön ja luonnon muun muassa
+                                kierrättämällä kaiken mahdollisen työstä aiheutuvan jätteen ja käyttämällä ympäristöystävällisiä
+                                tarvikkeita ja materiaaleja.</p>
+                            <ul class="article__tags">
+                                <li class="article__tag-item">Terassit</li>
+                                <li class="article__tag-item">Katot</li>
+                                <li class="article__tag-item">Puujulkisivut</li>
+                                <li class="article__tag-item">Tasoitustyöt</li>
+                                <li class="article__tag-item">Sisämaalaukset</li>
+                                <li class="article__tag-item">Lattiat</li>
+                                <li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
+                            </ul>
+                        </div>
+                        <div class="article__action">
+                            <button class="article__request-btn">Pyydä tarjous!</button>
+                            <div class="article__works works-counter">
+                                <img class="works-counter__icon">
+                                <span class="works-counter__number">11</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </output>
+        </form>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__main">
+                <div class="footer__particle">
+                    <h4 class="footer__particle-heading">Löydä lähin luotettava tekijä!</h4>
+                    <p class="footer__paragraph">Tekijäpankista löydät osaavat ja luotettavat tekijät maalaustyöllesi.</p>
+                    <a class="footer__link" href="#">Lue lisää</a>
+                </div>
+                <div class="footer__particle">
+                    <h4 class="footer__particle-heading">Yleistä</h4>
+                    <ul class="footer__particle-list">
+                        <li class="footer__particle-list-item">
+                            <a class="footer__link" href="#">Tietoa palvelusta</a>
+                        </li>
+                        <li class="footer__particle-list-item">
+                            <a class="footer__link" href="#">Ota yhteyttä</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__particle">
+                    <h4 class="footer__particle-heading">Seuraa meitä</h4>
+                    <ul class="footer__particle-list">
+                        <li class="footer__particle-list-item">
+                            <a class="footer__link" href="https://www.facebook.com/Tikkurila/" target="_blank">Facebook</a>
+                        </li>
+                        <li class="footer__particle-list-item">
+                            <a class="footer__link" href="https://plus.google.com/108601985648770116207/posts" target="_blank">Google+</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__copy">
+                <p class="footer__copy-text">© 2016 Tikkurila Oyj - <a class="footer__copy-link" href="https://www.tikkurila.fi" target="_blank">www.tikkurila.fi</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
