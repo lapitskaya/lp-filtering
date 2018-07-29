@@ -6,5 +6,18 @@
 @import "base/general";
 
 // import styles for components
-@import "base/blocks/one";
-@import "base/blocks/two";
+@import "base/blocks/header";
+@import "base/blocks/header-top";
+@import "base/blocks/header-menu";
+@import "base/blocks/request-modal";
+@import "base/blocks/main-content";
+@import "base/blocks/form-top";
+@import "base/blocks/search";
+@import "base/blocks/sorting-by";
+@import "base/blocks/form-middle";
+@import "base/blocks/tag-filter";
+@import "base/blocks/form-bottom";
+@import "base/blocks/output";
+@import "base/blocks/article";
+@import "base/blocks/works-counter";
+@import "base/blocks/footer";
