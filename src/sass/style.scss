@@ -1,5 +1,6 @@
 // import abstract styles
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 // import main styles
 @import "base/fonts";
@@ -10,7 +11,6 @@
 @import "base/blocks/header-top";
 @import "base/blocks/header-menu";
 @import "base/blocks/request-modal";
-@import "base/blocks/main-content";
 @import "base/blocks/form-top";
 @import "base/blocks/search";
 @import "base/blocks/sorting-by";

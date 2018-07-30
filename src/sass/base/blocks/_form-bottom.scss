@@ -1,3 +1,16 @@
 .form-bottom {
+  background-color: $c-gray;
+  padding: 12px 0;
+  border-top: 1px solid $c-gradient-dark;
 
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: $fs-small;
+    font-weight: $regular;
+    margin: 0;
+  }
 }

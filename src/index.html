@@ -12,28 +12,28 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__top header-top">
+        <div class="header-top">
             <div class="header-top__container">
-                <a href="#"><img class="header-top__logo" src="https://placehold.it/100x100" srcset="https://placehold.it/200x200 2x" alt="main logo"></a>
+                <a class="header-top__logo-link" href="#"><img class="header-top__logo" src="img/logo.svg" alt="main logo"></a>
                 <span class="header-top__slogan">Tekijäpankki</span>
             </div>
         </div>
 
-        <div class="header__menu header-menu">
+        <div class="header-menu">
             <div class="header-menu__container">
                 <button class="header-menu__burger">
-                    <span>menu</span>
+                    <span class="header-menu__burger-replacer">menu</span>
                 </button>
 
                 <div class="header-menu__menu">
                     <nav class="header-menu__nav">
                         <ul class="header-menu__list">
-                            <li class="header-menu__item">
+                            <li class="header-menu__item header-menu__item--home">
                                 <a class="header-menu__link" href="#">
                                     <img class="header-menu__home-icon" src="" alt="home">
                                 </a>
                             </li>
-                            <li class="header-menu__item">
+                            <li class="header-menu__item--disabled">
                                 <span class="header-menu__link header-menu__link--disabled">Tekijät</span>
                             </li>
                             <li class="header-menu__item">
@@ -65,77 +65,81 @@
     </header>
 
 
-    <main role="main" class="main-content">
+    <main role="main">
 
         <form>
             <div class="form-top">
                 <div class="form-top__container">
-                    <fieldset class="form-top__search search">
-                        <legend class="search__legend">Hae</legend>
-                        <input class="search__field" id="searchField" type="search" name="q" placeholder="">
-                        <button class="search__btn" id="searchSubmit"></button>
-                    </fieldset>
-                    <fieldset class="form-top__sorting-by sorting-by">
-                        <legend class="sorting-by__legend">Lajitteluperuste</legend>
+                    <div class="form-top__search search">
+                        <h3 class="search__heading">Hae</h3>
+                        <div class="search__field-container">
+                            <input class="search__field" id="searchField" type="search" name="q" placeholder="">
+                            <button class="search__btn" id="searchSubmit"></button>
+                        </div>
+                    </div>
+                    <div class="form-top__sorting-by sorting-by">
+                        <h3 class="sorting-by__heading">Lajitteluperuste</h3>
                         <ul class="sorting-by__list">
                             <li class="sorting-by__item">
-                                <label class="sorting-by__label">Työnäytteet</label>
-                                <input class="sorting-by__radio" type="radio" checked>
+                                <input class="sorting-by__radio" type="radio" name="sorting" value="works" id="works" checked>
+                                <label class="sorting-by__label" for="works">Työnäytteet</label>
                             </li>
                             <li class="sorting-by__item">
-                                <label class="sorting-by__label">Nimi</label>
-                                <input class="sorting-by__radio" type="radio">
+                                <input class="sorting-by__radio" type="radio" name="sorting" value="name" id="name">
+                                <label class="sorting-by__label" for="name">Nimi</label>
                             </li>
                             <li class="sorting-by__item">
-                                <label class="sorting-by__label">Palaute</label>
-                                <input class="sorting-by__radio" type="radio">
+                                <input class="sorting-by__radio" type="radio" name="sorting" value="feedback" id="feedback">
+                                <label class="sorting-by__label" for="feedback">Palaute</label>
                             </li>
                         </ul>
-                    </fieldset>
+                    </div>
                 </div>
             </div>
             <div class="form-middle">
-                <fieldset class="form-middle__container tag-filter">
-                    <legend class="tag-filter__legend">Valitse maalaustyö</legend>
-                    <ul class="tag-filter__list">
-                        <li class="tag-filter__item">
-                            <label class="tag-filter__label">Terassit</label>
-                            <input class="tag-filter__checkbox" type="checkbox">
-                        </li>
-                        <li class="tag-filter__item">
-                            <label class="tag-filter__label">Katot</label>
-                            <input class="tag-filter__checkbox" type="checkbox">
-                        </li>
-                        <li class="tag-filter__item">
-                            <label class="tag-filter__label">Puujulkisivut</label>
-                            <input class="tag-filter__checkbox" type="checkbox">
-                        </li>
-                        <li class="tag-filter__item">
-                            <label class="tag-filter__label">Tasoitustyöt</label>
-                            <input class="tag-filter__checkbox" type="checkbox">
-                        </li>
-                        <li class="tag-filter__item">
-                            <label class="tag-filter__label">Efektimaalaus</label>
-                            <input class="tag-filter__checkbox" type="checkbox">
-                        </li>
-                        <li class="tag-filter__item">
-                            <label class="tag-filter__label">Sisämaalaukset</label>
-                            <input class="tag-filter__checkbox" type="checkbox">
-                        </li>
-                        <li class="tag-filter__item">
-                            <label class="tag-filter__label">Lattiat</label>
-                            <input class="tag-filter__checkbox" type="checkbox">
-                        </li>
-                        <li class="tag-filter__item">
-                            <label class="tag-filter__label">Kivijulkisivut ja sokkelit</label>
-                            <input class="tag-filter__checkbox" type="checkbox">
-                        </li>
-                        <li class="tag-filter__item">
-                            <label class="tag-filter__label">Ovet ikkunat ja kalusteet</label>
-                            <input class="tag-filter__checkbox" type="checkbox">
-                        </li>
-                    </ul>
-                </fieldset>
+                <div class="form-middle__container">
+                    <div class="tag-filter">
+                        <h3 class="tag-filter__heading">Valitse maalaustyö</h3>
+                        <ul class="tag-filter__list">
+                            <li class="tag-filter__item">
+                                <input class="tag-filter__checkbox" type="checkbox" id="ter" name="ter" value="ter">
+                                <label class="tag-filter__label" for="ter">Terassit</label>
+                            </li>
+                            <li class="tag-filter__item">
+                                <input class="tag-filter__checkbox" type="checkbox" id="kat" name="kat" value="kat">
+                                <label class="tag-filter__label" for="kat">Katot</label>
+                            </li>
+                            <li class="tag-filter__item">
+                                <input class="tag-filter__checkbox" type="checkbox" id="puu" name="puu" value="puu">
+                                <label class="tag-filter__label" for="puu">Puujulkisivut</label>
+                            </li>
+                            <li class="tag-filter__item">
+                                <input class="tag-filter__checkbox" type="checkbox" id="tas" name="tas" value="tas">
+                                <label class="tag-filter__label" for="tas">Tasoitustyöt</label>
+                            </li>
+                            <li class="tag-filter__item">
+                                <input class="tag-filter__checkbox" type="checkbox" id="efe" name="efe" value="efe">
+                                <label class="tag-filter__label" for="efe">Efektimaalaus</label>
+                            </li>
+                            <li class="tag-filter__item">
+                                <input class="tag-filter__checkbox" type="checkbox" id="sis" name="sis" value="sis">
+                                <label class="tag-filter__label" for="sis">Sisämaalaukset</label>
+                            </li>
+                            <li class="tag-filter__item">
+                                <input class="tag-filter__checkbox" type="checkbox" id="lat" name="lat" value="lat">
+                                <label class="tag-filter__label" for="lat">Lattiat</label>
+                            </li>
+                            <li class="tag-filter__item">
+                                <input class="tag-filter__checkbox" type="checkbox" id="kiv" name="kiv" value="kiv">
+                                <label class="tag-filter__label" for="kiv">Kivijulkisivut ja sokkelit</label>
+                            </li>
+                            <li class="tag-filter__item">
+                                <input class="tag-filter__checkbox" type="checkbox" id="ove" name="ove" value="ove">
+                                <label class="tag-filter__label" for="ove">Ovet ikkunat ja kalusteet</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="form-bottom">
                 <div class="form-bottom__container">
@@ -149,7 +153,7 @@
                     <div class="output__no-result">'Haku ei tuottanut tuloksia'</div>
 
                     <article class="output__item article">
-                        <img class="article__img" src="https://placehold.it/140x140" srcset="https://placehold.it/280x280 2x" alt="">
+                        <img class="article__img" src="img/painter01.jpg" srcset="img/painter01@2x.jpg 2x" alt="">
                         <div class="article__content">
                             <h3 class="article__heading">Tammijuuri</h3>
                             <ul class="article__contact-info">
@@ -188,7 +192,7 @@
                     </article>
 
                     <article class="output__item article">
-                        <img class="article__img" src="https://placehold.it/140x140" srcset="https://placehold.it/280x280 2x" alt="">
+                        <img class="article__img" src="img/painter02.jpg" srcset="img/painter02@2x.jpg 2x" alt="">
                         <div class="article__content">
                             <h3 class="article__heading">Tammijuuri</h3>
                             <ul class="article__contact-info">
@@ -236,12 +240,14 @@
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__main">
-                <div class="footer__particle">
+                <div class="footer__particle footer__particle--wide">
                     <h4 class="footer__particle-heading">Löydä lähin luotettava tekijä!</h4>
                     <p class="footer__paragraph">Tekijäpankista löydät osaavat ja luotettavat tekijät maalaustyöllesi.</p>
-                    <a class="footer__link" href="#">Lue lisää</a>
+                        <span class="footer__link-wrapper">
+                            <a class="footer__link" href="#">Lue lisää</a>
+                        </span>
                 </div>
-                <div class="footer__particle">
+                <div class="footer__particle footer__particle--short">
                     <h4 class="footer__particle-heading">Yleistä</h4>
                     <ul class="footer__particle-list">
                         <li class="footer__particle-list-item">
@@ -252,7 +258,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer__particle">
+                <div class="footer__particle footer__particle--short footer__particle--last">
                     <h4 class="footer__particle-heading">Seuraa meitä</h4>
                     <ul class="footer__particle-list">
                         <li class="footer__particle-list-item">
@@ -264,7 +270,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer__copy">
+            <div>
                 <p class="footer__copy-text">© 2016 Tikkurila Oyj - <a class="footer__copy-link" href="https://www.tikkurila.fi" target="_blank">www.tikkurila.fi</a></p>
             </div>
         </div>

@@ -1,3 +1,117 @@
 .header-menu {
+  background-color: $c-grayish-orange;
+  color: $c-white;
 
+  &__container {
+    @media (min-width: $not-mob) {
+      @include container;
+    }
+  }
+
+  &__burger {
+    padding: 15px 25px;
+    background-color: inherit;
+    height: 64px;
+    border: none;
+
+    @media (min-width: $not-mob) {
+      @include hide;
+    }
+  }
+
+  &__burger-replacer {
+    color: $c-white;
+    border: 1px solid $c-white;
+    padding: 7px;
+    cursor: pointer;
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $not-mob) {
+      padding: 17px 0 17px 160px;
+      justify-content: space-between;
+    }
+  }
+
+  &__nav {
+    flex-basis: 100%;
+
+    @media (min-width: $not-mob) {
+      flex-basis: auto;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    flex-basis: 100%;
+    padding: 14px;
+    border-bottom: 1px solid $c-grayish-orange;
+    text-decoration: none;
+    background-color: $c-dark-grayishnavy;
+
+    &--disabled, &--home {
+      @include hide;
+      padding: 0;
+
+      @media (min-width: $not-mob) {
+        @include show(static,auto,auto,0);
+        padding: 14px;
+
+        &:hover {
+          cursor: default;
+        }
+      }
+    }
+
+    @media (min-width: $not-mob) {
+      @include show(static,auto,auto,0);
+      border: none;
+      background-color: inherit;
+      flex-basis: auto;
+      transition: all .3s;
+
+      &:hover {
+        background-color: $c-napa;
+        transition: all .3s;
+      }
+    }
+  }
+
+  &__link {
+    color: $c-white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: $regular;
+
+    &--disabled {
+      @include hide;
+
+      @media (min-width: $not-mob) {
+        @include show(static,auto,auto,0);
+      }
+    }
+
+    @media (min-width: $not-mob) {
+      font-size: 15.6px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__home-icon {
+    @include hide;
+    padding: 0;
+
+    @media (min-width: $not-mob) {
+      @include show(static,auto,auto,0);
+    }
+  }
 }

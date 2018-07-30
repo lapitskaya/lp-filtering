@@ -1,3 +1,60 @@
 .tag-filter {
 
+  &__heading {
+    font-size: $fs-small;
+    font-weight: $black;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+  }
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: -7px;
+  }
+
+  &__item {
+    margin-bottom: 7px;
+    margin-right: 5px;
+  }
+
+  &__label {
+    color: $c-text-dark;
+    font-size: $fs-small;
+    background-color: $c-white;
+    border: 1px solid $c-grayish-orange;
+    min-height: 25px;
+    padding: 3px 14px;
+    border-radius: 30px;
+    line-height: 23px;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      background-color: $c-white-smoke;
+      transition: all .3s;
+    }
+  }
+
+  &__checkbox {
+    @include hide;
+
+    &:checked ~ .tag-filter__label {
+      color: $c-green-dark;
+      background-color: $c-green-light;
+      border-color: $c-green-light;
+      transition: all .3s;
+    }
+
+    &:hover {
+      &:checked ~ .tag-filter__label {
+        color: $c-green-light;
+        background-color: $c-green-dark;
+        border-color: $c-green-dark;
+        transition: all .3s;
+      }
+    }
+  }
 }

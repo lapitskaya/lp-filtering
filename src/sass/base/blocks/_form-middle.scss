@@ -1,3 +1,9 @@
 .form-middle {
+  background-color: $c-gray;
+  padding-top: 13px;
+  padding-bottom: 13px;
 
+  &__container {
+    @include container;
+  }
 }

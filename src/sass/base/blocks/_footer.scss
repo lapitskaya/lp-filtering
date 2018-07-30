@@ -1,3 +1,98 @@
 .footer {
+  background-color: $c-white;
+  border-top: 1px solid $c-gradient-dark;
+  padding: 28px 0 0;
 
+  &__container {
+    @include container;
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $not-mob) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__particle {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+
+    &--last {
+      margin-left: 0;
+      margin-bottom: 40px;
+    }
+
+    &--wide {
+      margin-right: 0;
+    }
+
+    @media (min-width: $not-mob) {
+      margin-bottom: 40px;
+
+      &--wide {
+        flex-basis: 50%;
+        margin-right: 150px;
+      }
+
+      &--short {
+        flex-basis: 130px;
+        flex-shrink: 0;
+      }
+
+      &--last {
+        margin-left: 120px;
+        flex-basis: 140px;
+      }
+    }
+  }
+
+  &__particle-heading {
+    font-size: 19.2px;
+    font-weight: $light;
+    margin: 0 0 8px;
+  }
+
+  &__paragraph {
+    font-size: 15.6px;
+    font-weight: $light;
+    line-height: 1.6;
+    margin: 0 0 25px;
+  }
+
+  &__link {
+    @include general-link(16.2px);
+    line-height: 22.68px;
+  }
+
+  &__particle-list {
+    @include list-reset;
+  }
+
+  &__particle-list-item, &__link-wrapper {
+
+    &:after {
+      content: "»";
+      color: $c-dark;
+    }
+  }
+
+  &__copy-text {
+    font-size: $fs-small;
+    text-align: center;
+
+    @media (min-width: $not-mob) {
+      font-size: 11.4px;
+    }
+  }
+
+  &__copy-link {
+    @include general-link($fs-small);
+
+    @media (min-width: $not-mob) {
+      font-size: 11.4px;
+    }
+  }
 }

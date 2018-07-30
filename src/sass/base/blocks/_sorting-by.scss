@@ -1,3 +1,70 @@
 .sorting-by {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
 
+  &__heading {
+    font-size: $fs-small;
+    font-weight: $black;
+    text-transform: uppercase;
+    flex-basis: 100%;
+    margin-top: 7px;
+    margin-bottom: 3px;
+
+    @media (min-width: $not-mob) {
+      flex-basis: auto;
+      margin: 0 28px 0 40px;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+
+    @media (min-width: $not-mob) {
+      flex-basis: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    padding-bottom: 3px;
+    color: $c-dark-blue;
+    font-size: $fs-small;
+    border-bottom: 3px solid $c-dark-blue-o;
+    transition: all .3s;
+  }
+
+  &__radio {
+    @include hide;
+
+    &:checked ~ .sorting-by__label {
+      cursor: default;
+      color: $c-dark;
+      border-bottom: 3px solid $c-dark-blue;
+      transition: all .3s;
+    }
+
+    &:hover {
+      &:checked ~ .sorting-by__label {
+        color: $c-dark;
+        border-bottom: 3px solid $c-dark-blue;
+        transition: all .3s;
+      }
+    }
+  }
 }

@@ -1,3 +1,32 @@
 .output {
+  background-color: $c-white;
+  padding-bottom: 40px;
 
+
+  &__container {
+    @include container;
+  }
+
+  &__no-result {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: $c-light-orange;
+    font-size: 21px;
+    font-weight: $regular;
+    text-align: center;
+    background-color: $c-ivory;
+    box-shadow: 0 0 1px $c-light-orange;
+    border-radius: 4px;
+  }
+
+  &__item {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid $c-gradient-dark;
+
+    &:last-child {
+      border: none;
+    }
+  }
 }

@@ -1,3 +1,50 @@
 .header-top {
+  @include linear-gradient($c-gradient-dark,$c-gradient-light);
+  height: 64px;
+  position: relative;
 
+  @media (min-width: $not-mob) {
+    height: 48px;
+  }
+
+  &__container {
+    vertical-align: middle;
+    height: 100%;
+
+    @media (min-width: $not-mob) {
+      @include container;
+    }
+  }
+
+  &__logo-link {
+    margin: 5px;
+    position: absolute;
+
+    @media (min-width: $not-mob) {
+      margin: 1px 0 0;
+    }
+  }
+
+  &__logo {
+    width: 54px;
+
+    @media (min-width: $not-mob) {
+      width: auto;
+    }
+  }
+
+  &__slogan {
+    margin-left: 120px;
+    color: $c-grayish-orange;
+    font-weight: $bold;
+    text-transform: uppercase;
+    font-size: 20.4px;
+    line-height: 68px;
+    vertical-align: middle;
+
+    @media (min-width: $not-mob) {
+      margin-left: 160px;
+      line-height: 52px;
+    }
+  }
 }

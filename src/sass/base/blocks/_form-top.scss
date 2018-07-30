@@ -1,3 +1,29 @@
 .form-top {
+  @include linear-gradient($c-gradient-dark,$c-gradient-light);
 
+  &__container {
+    @include container;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $not-mob) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__search {
+    flex-basis: 100%;
+
+    @media (min-width: $not-mob) {
+      flex-basis: 50%;
+    }
+  }
+
+  &__sorting-by {
+    flex-basis: 100%;
+
+    @media (min-width: $not-mob) {
+      flex-basis: 50%;
+    }
+  }
 }

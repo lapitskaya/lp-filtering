@@ -1,0 +1,47 @@
+@mixin linear-gradient($color-one,$color-two) {
+  background: linear-gradient(0deg,$color-one,$color-two);
+}
+
+@mixin container {
+  width: 100%;
+  max-width: 968px;
+  padding-left: 14px;
+  padding-right: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+@mixin general-link($f-size) {
+  font-size: $f-size;
+  color: $c-second;
+  text-decoration: none;
+  transition: all .3s;
+
+  &:hover {
+    text-decoration: underline;
+    transition: all .3s;
+  }
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin hide {
+  position: absolute;
+  clip: rect(0,0,0,0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+@mixin show($position,$width,$height,$margin) {
+  position: $position;
+  clip: auto;
+  width: $width;
+  height: $height;
+  margin: $margin;
+}
