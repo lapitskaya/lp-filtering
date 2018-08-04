@@ -1,7 +1,3 @@
-@mixin linear-gradient($color-one,$color-two) {
-  background: linear-gradient(0deg,$color-one,$color-two);
-}
-
 @mixin container {
   width: 100%;
   max-width: 968px;

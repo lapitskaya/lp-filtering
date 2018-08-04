@@ -1,5 +1,5 @@
 .form-top {
-  @include linear-gradient($c-gradient-dark,$c-gradient-light);
+  background: linear-gradient(0deg,$c-gradient-dark,$c-gradient-light);
 
   &__container {
     @include container;
