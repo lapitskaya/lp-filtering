@@ -24,8 +24,12 @@
   font-style: normal; }
 
 body {
+  position: relative;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "MyriadPro", Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -539,7 +543,6 @@ body {
             box-sizing: border-box; }
   .output__no-result {
     margin-top: 10px;
-    margin-bottom: 20px;
     padding: 10px;
     color: #e28327;
     font-size: 21px;
@@ -557,9 +560,12 @@ body {
       border: none; }
 
 .footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 28px 0 0;
   background-color: #ffffff;
-  border-top: 1px solid #e2e2e1;
-  padding: 28px 0 0; }
+  border-top: 1px solid #e2e2e1; }
   .footer__container {
     width: 100%;
     max-width: 968px;

@@ -2,14 +2,12 @@
   background-color: $c-white;
   padding-bottom: 40px;
 
-
   &__container {
     @include container;
   }
 
   &__no-result {
     margin-top: 10px;
-    margin-bottom: 20px;
     padding: 10px;
     color: $c-light-orange;
     font-size: 21px;

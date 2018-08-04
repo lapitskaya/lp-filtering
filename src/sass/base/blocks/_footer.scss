@@ -1,7 +1,10 @@
 .footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 28px 0 0;
   background-color: $c-white;
   border-top: 1px solid $c-gradient-dark;
-  padding: 28px 0 0;
 
   &__container {
     @include container;

@@ -1,6 +1,9 @@
 body {
+  position: relative;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "MyriadPro", Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
