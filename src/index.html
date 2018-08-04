@@ -14,7 +14,7 @@
     <header class="header">
         <div class="header-top">
             <div class="header-top__container">
-                <a class="header-top__logo-link" href="#"><img class="header-top__logo" src="img/logo.svg" alt="main logo"></a>
+                <a class="header-top__logo-link" href="https://tekijapankki.tikkurila.fi" target="_blank"><img class="header-top__logo" src="img/logo.svg" alt="main logo"></a>
                 <span class="header-top__slogan">Tekijäpankki</span>
             </div>
         </div>
@@ -31,15 +31,15 @@
                     <nav class="header-menu__nav">
                         <ul class="header-menu__list">
                             <li class="header-menu__item header-menu__item--home">
-                                <a class="header-menu__link" href="#">
-                                    <img class="header-menu__home-icon" src="" alt="home">
+                                <a class="header-menu__link" href="https://tekijapankki.tikkurila.fi" target="_blank">
+                                    <svg class="header-menu__home-icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-home"></use></svg>
                                 </a>
                             </li>
-                            <li class="header-menu__item--disabled">
+                            <li class="header-menu__item header-menu__item--disabled">
                                 <span class="header-menu__link header-menu__link--disabled">Tekijät</span>
                             </li>
                             <li class="header-menu__item">
-                                <a class="header-menu__link" href="#">Tietoa palvelusta</a>
+                                <a class="header-menu__link" href="https://tekijapankki.tikkurila.fi/about" target="_blank">Tietoa palvelusta</a>
                             </li>
                         </ul>
                     </nav>
@@ -76,7 +76,9 @@
                         <h3 class="search__heading">Hae</h3>
                         <div class="search__field-container">
                             <input class="search__field" id="searchField" type="search" name="q" placeholder="">
-                            <button class="search__btn" id="searchSubmit"></button>
+                            <button class="search__btn" id="searchSubmit">
+                                <svg class="search__search-icon" width="25" height="25"><use xlink:href="../img/sprite.svg#icon-search"></use></svg>
+                            </button>
                         </div>
                     </div>
                     <div class="form-top__sorting-by sorting-by">

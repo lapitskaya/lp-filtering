@@ -3,6 +3,8 @@
   color: $c-white;
 
   &__container {
+    position: relative;
+
     @media (min-width: $not-mob) {
       @include container;
     }
@@ -99,6 +101,10 @@
 
   &__menu {
     display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 5;
 
     &--hide {
       display: none;
@@ -109,6 +115,7 @@
       flex-wrap: wrap;
       padding: 17px 0 17px 160px;
       justify-content: space-between;
+      position: static;
 
       &--hide {
         display: flex !important; //to re-wright slideUp 'display: none' inline value
@@ -140,16 +147,6 @@
 
     &--disabled, &--home {
       @include hide;
-      padding: 0;
-
-      @media (min-width: $not-mob) {
-        @include show(static,auto,auto,0);
-        padding: 14px;
-
-        &:hover {
-          cursor: default;
-        }
-      }
     }
 
     @media (min-width: $not-mob) {
@@ -158,10 +155,28 @@
       background-color: inherit;
       flex-basis: auto;
       transition: all .3s;
+      padding: 14px 19px;
 
       &:hover {
         background-color: $c-napa;
         transition: all .3s;
+      }
+
+      &--home {
+        @include show(relative,18px,auto,0);
+
+        &:hover {
+          cursor: default;
+        }
+      }
+
+      &--disabled {
+        @include show(static,auto,auto,0);
+
+        &:hover {
+          cursor: default;
+          background-color: inherit;
+        }
       }
     }
   }
@@ -171,12 +186,14 @@
     text-decoration: none;
     font-size: 18px;
     font-weight: $regular;
+    position: relative;
 
     &--disabled {
       @include hide;
 
       @media (min-width: $not-mob) {
         @include show(static,auto,auto,0);
+        border-bottom: 3px solid $c-white;
       }
     }
 
@@ -191,7 +208,7 @@
     padding: 0;
 
     @media (min-width: $not-mob) {
-      @include show(static,auto,auto,0);
+      @include show(absolute,18px,16px,0);
     }
   }
 }
