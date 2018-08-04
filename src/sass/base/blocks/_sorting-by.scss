@@ -59,12 +59,10 @@
       transition: all .3s;
     }
 
-    &:hover {
-      &:checked ~ .sorting-by__label {
+    &:hover ~ .sorting-by__label {
         color: $c-dark;
         border-bottom: 3px solid $c-dark-blue;
         transition: all .3s;
-      }
     }
   }
 }

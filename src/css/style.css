@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: "MyriadPro";
-  src: url("../fonts/MyriadPro-Black") format("woff2"), url("../fonts/MyriadPro-Black") format("woff");
+  src: url("../fonts/MyriadPro-Black.woff2") format("woff2"), url("../fonts/MyriadPro-Black.woff") format("woff");
   font-weight: 700;
   font-style: normal; }
 
@@ -426,7 +426,7 @@ body {
       border-bottom: 3px solid #3a3f6d;
       -webkit-transition: all .3s;
       transition: all .3s; }
-    .sorting-by__radio:hover:checked ~ .sorting-by__label {
+    .sorting-by__radio:hover ~ .sorting-by__label {
       color: #282828;
       border-bottom: 3px solid #3a3f6d;
       -webkit-transition: all .3s;
