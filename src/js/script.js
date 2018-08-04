@@ -19,4 +19,16 @@ $(document).ready(function () {
 
     //for test, to see the page without content
     $('.article').hide();
+
+    //burger menu
+    $('.js-header-menu__burger').on('click', function () {
+        $(this).toggleClass('header-menu__burger--x');
+        if ($('.header-menu__menu').hasClass('header-menu__menu--hide')) {
+            $('.header-menu__menu').slideDown();
+        } else {
+            $('.header-menu__menu').slideUp();
+        }
+        $('.header-menu__menu').toggleClass('header-menu__menu--hide');
+    });
+
 });

@@ -8,31 +8,111 @@
     }
   }
 
-  &__burger {
-    padding: 15px 25px;
+  &__burger-row {
     background-color: inherit;
     height: 64px;
+    padding-right: 15px;
+    box-sizing: border-box;
     border: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
     @media (min-width: $not-mob) {
       @include hide;
     }
   }
 
-  &__burger-replacer {
-    color: $c-white;
-    border: 1px solid $c-white;
-    padding: 7px;
+  &__burger {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: $c-white-o;
+    border: none;
     cursor: pointer;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    padding: 15px 25px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &--x .header-menu__span {
+      background: none;
+      transition-delay: 0s, .3s;
+
+      &:before {
+        transition-delay: 0s, .3s;
+        transform: rotate(-45deg);
+        top: 0;
+      }
+
+      &:after {
+        transition-delay: 0s, .3s;
+        transform: rotate(45deg);
+        bottom: 0;
+      }
+    }
+  }
+
+  &__span {
+    display: block;
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    right: 10px;
+    height: 5px;
+    background: $c-white;
+    transition-delay: .3s, 0s;
+
+    &:before {
+      background: $c-white;
+      transition-property: top, transform;
+      top: -9px;
+      transition-duration: .3s, .3s;
+      transition-delay: .3s, 0s;
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      content: "";
+    }
+
+    &:after {
+      background: $c-white;
+      transition-property: bottom, transform;
+      bottom: -9px;
+      transition-duration: .3s, .3s;
+      transition-delay: .3s, 0s;
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      content: "";
+    }
   }
 
   &__menu {
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
+
+    &--hide {
+      display: none;
+    }
 
     @media (min-width: $not-mob) {
+      display: flex !important; //to re-wright slideDown 'display: block' inline value
+      flex-wrap: wrap;
       padding: 17px 0 17px 160px;
       justify-content: space-between;
+
+      &--hide {
+        display: flex !important; //to re-wright slideUp 'display: none' inline value
+      }
     }
   }
 
