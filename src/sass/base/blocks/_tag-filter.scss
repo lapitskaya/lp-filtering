@@ -40,21 +40,19 @@
 
   &__checkbox {
     @include hide;
+  }
+}
 
-    &:checked ~ .tag-filter__label {
-      color: $c-green-dark;
-      background-color: $c-green-light;
-      border-color: $c-green-light;
-      transition: all .3s;
-    }
+.js-f-tag-active {
+  color: $c-green-dark;
+  background-color: $c-green-light;
+  border-color: $c-green-light;
+  transition: all .3s;
 
-    &:hover {
-      &:checked ~ .tag-filter__label {
-        color: $c-green-light;
-        background-color: $c-green-dark;
-        border-color: $c-green-dark;
-        transition: all .3s;
-      }
-    }
+  &:hover {
+    color: $c-green-light;
+    background-color: $c-green-dark;
+    border-color: $c-green-dark;
+    transition: all .3s;
   }
 }

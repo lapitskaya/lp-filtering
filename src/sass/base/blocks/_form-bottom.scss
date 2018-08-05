@@ -2,6 +2,8 @@
   background-color: $c-gray;
   padding: 12px 0;
   border-top: 1px solid $c-gradient-dark;
+  position: relative;
+  z-index: 10;
 
   &__container {
     @include container;

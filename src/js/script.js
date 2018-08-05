@@ -31,4 +31,38 @@ $(document).ready(function () {
         $('.header-menu__menu').toggleClass('header-menu__menu--hide');
     });
 
+    //filtering by tag names
+    function filterByTags(a) {
+        var clickedTag = $(a).attr('data-f-tag');
+        var articleTag = $('[data-tag]');
+
+        $(articleTag).each(function () {
+            var articleTagVal = $(this).attr('data-tag');
+            var n = articleTagVal.search(clickedTag);
+
+            if (n == -1) {
+                $(this).closest('.article').hide();
+            }
+        });
+
+        if ($('.article').is(':visible')) {
+            $('.output__no-result').hide();
+        } else {
+            $('.output__no-result').show();
+        }
+    }
+
+    $('[data-f-tag]').on('click', function () {
+        $(this).toggleClass('js-f-tag-active');
+
+        if ($(this).hasClass('js-f-tag-active')) {
+            filterByTags(this);
+        } else {
+            $('.article').show();
+            $('.js-f-tag-active').each(function () {
+                filterByTags(this);
+            });
+        }
+    });
+
 });

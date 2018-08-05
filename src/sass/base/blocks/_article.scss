@@ -30,6 +30,7 @@
   &__content {
     padding-bottom: 15px;
     border-bottom: 1px dotted $c-gray80;
+    flex-grow: 1;
 
     @media (min-width: $not-mob) {
       align-self: stretch;

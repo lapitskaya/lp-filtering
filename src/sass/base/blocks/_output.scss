@@ -4,6 +4,7 @@
 
   &__container {
     @include container;
+    margin-top: -1px;
   }
 
   &__no-result {
@@ -21,10 +22,6 @@
   &__item {
     padding-top: 17px;
     padding-bottom: 17px;
-    border-bottom: 1px solid $c-gradient-dark;
-
-    &:last-child {
-      border: none;
-    }
+    border-top: 1px solid $c-gradient-dark;
   }
 }
