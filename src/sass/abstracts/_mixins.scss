@@ -41,3 +41,15 @@
   height: $height;
   margin: $margin;
 }
+
+@mixin button ($c-border) {
+  cursor: pointer;
+  text-align: center;
+  padding: 3px 11px;
+  border: 1px solid $c-border;
+  color: $c-border;
+  height: 36px;
+  font-weight: $regular;
+  font-size: $fs-small;
+  font-family: "MyriadPro", Helvetica, sans-serif;
+}

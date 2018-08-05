@@ -17,8 +17,8 @@ $(document).ready(function () {
         $('body').css('padding-bottom', bodyPaddingBottom + 'px');
     }
 
-    //for test, to see the page without content
-    $('.article').hide();
+    //temporary hide the message
+    $('.output__no-result').hide();
 
     //burger menu
     $('.js-header-menu__burger').on('click', function () {

@@ -14,13 +14,36 @@
 
     @media (min-width: $not-mob) {
       width: auto;
-      border: 1px solid $c-white;
+      min-width: 140px;
       opacity: .6;
       background-color: inherit;
-      font-size: $fs-small;
-      padding: 3px 27px;
       margin-top: 5px;
       margin-bottom: 5px;
+      @include button ($c-white);
+    }
+
+    &--active {
+
+      @media (min-width: $not-mob) {
+        color: $c-white;
+        background-color: $c-green-dark;
+        border: none;
+        opacity: 1;
+        background: linear-gradient(to left, $c-green-dark, $c-green-light);
+        background: linear-gradient(to left, $c-green-dark, $c-green-middle-3, $c-green-middle-2, $c-green-middle-1, $c-green-light, $c-green-middle-1, $c-green-middle-2, $c-green-middle-3, $c-green-dark);
+        animation: animateGlow 10s linear infinite;
+        background-size: 200% 200%;
+        transition: all .3s;
+
+        &:hover {
+          opacity: 1;
+          animation: none;
+          background: $c-green-dark;
+          border: none;
+          color: $c-white;
+          transition: all .3s;
+        }
+      }
     }
   }
 }

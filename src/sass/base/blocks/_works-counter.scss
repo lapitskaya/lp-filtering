@@ -1,10 +1,18 @@
 .works-counter {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   &__icon {
-
+    position: absolute;
+    top: 0;
+    width: 14px;
+    height: 16px;
   }
 
   &__number {
-
+    font-size: 12px;
+    font-weight: $black;
   }
 }

@@ -157,16 +157,18 @@
                     <div class="output__no-result">'Haku ei tuottanut tuloksia'</div>
 
                     <article class="output__item article">
-                        <img class="article__img" src="img/painter01.jpg" srcset="img/painter01@2x.jpg 2x" alt="">
+                        <div class="article__img-container">
+                            <img class="article__img" src="img/painter01.jpg" srcset="img/painter01@2x.jpg 2x" alt="">
+                        </div>
                         <div class="article__content">
-                            <h3 class="article__heading">Tammijuuri</h3>
+                            <h3 class="article__heading"><a class="article__heading-link" href="https://tekijapankki.tikkurila.fi/company/tammijuuri" target="_blank">Tammijuuri</a></h3>
                             <ul class="article__contact-info">
-                                <li class="article__contact-item article__contact-item--location">HELSINKI</li>
+                                <li class="article__contact-item article__contact-item--location"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mark"></use></svg>HELSINKI</li>
                                 <li class="article__contact-item article__contact-item--phone">
-                                    <a class="article__contact-link" href="tel:+358407350437">+358407350437</a>
+                                    <a class="article__contact-link" href="tel:+358407350437"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-phone"></use></svg>+358407350437</a>
                                 </li>
-                                <li class="article__contact-item article__contact-item--email">
-                                    <a class="article__contact-link" href="mailto:lauri@tammijuuri.fi">lauri@tammijuuri.fi</a>
+                                <li class="article__contact-item">
+                                    <a class="article__contact-link" href="mailto:lauri@tammijuuri.fi"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mail"></use></svg>lauri@tammijuuri.fi</a>
                                 </li>
                             </ul>
                             <p class="article__description">Tammijuuri on ystävällinen ja ihmisläheinen maalausliike Helsingistä.
@@ -177,59 +179,277 @@
                                 kierrättämällä kaiken mahdollisen työstä aiheutuvan jätteen ja käyttämällä ympäristöystävällisiä
                                 tarvikkeita ja materiaaleja.</p>
                             <ul class="article__tags">
-                                <li class="article__tag-item">Terassit</li>
-                                <li class="article__tag-item">Katot</li>
-                                <li class="article__tag-item">Puujulkisivut</li>
-                                <li class="article__tag-item">Tasoitustyöt</li>
-                                <li class="article__tag-item">Sisämaalaukset</li>
-                                <li class="article__tag-item">Lattiat</li>
-                                <li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
+                                <li class="article__tag-item">Terassit</li><!--
+                                --><li class="article__tag-item">Katot</li><!--
+                                --><li class="article__tag-item">Puujulkisivut</li><!--
+                                --><li class="article__tag-item">Tasoitustyöt</li><!--
+                                --><li class="article__tag-item">Sisämaalaukset</li><!--
+                                --><li class="article__tag-item">Lattiat</li><!--
+                                --><li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
                             </ul>
                         </div>
                         <div class="article__action">
                             <button class="article__request-btn">Pyydä tarjous!</button>
                             <div class="article__works works-counter">
-                                <img class="works-counter__icon">
-                                <span class="works-counter__number">11</span>
+                                <svg class="works-counter__icon" width="14" height="16"><use xlink:href="../img/sprite.svg#icon-house"></use></svg>
+                                <span class="works-counter__number">4</span>
                             </div>
                         </div>
                     </article>
 
                     <article class="output__item article">
-                        <img class="article__img" src="img/painter02.jpg" srcset="img/painter02@2x.jpg 2x" alt="">
+                        <div class="article__img-container">
+                            <img class="article__img" src="img/painter02.jpg" srcset="img/painter02@2x.jpg 2x" alt="">
+                        </div>
                         <div class="article__content">
-                            <h3 class="article__heading">Tammijuuri</h3>
+                            <h3 class="article__heading"><a class="article__heading-link" href="https://tekijapankki.tikkurila.fi/company/mr-toteutus" target="_blank">MR-Toteutus</a></h3>
                             <ul class="article__contact-info">
-                                <li class="article__contact-item article__contact-item--location">HELSINKI</li>
+                                <li class="article__contact-item article__contact-item--location"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mark"></use></svg>VANTAA</li>
                                 <li class="article__contact-item article__contact-item--phone">
-                                    <a class="article__contact-link" href="tel:+358407350437">+358407350437</a>
+                                    <a class="article__contact-link" href="tel:+358442994095"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-phone"></use></svg>+358442994095</a>
                                 </li>
-                                <li class="article__contact-item article__contact-item--email">
-                                    <a class="article__contact-link" href="mailto:lauri@tammijuuri.fi">lauri@tammijuuri.fi</a>
+                                <li class="article__contact-item">
+                                    <a class="article__contact-link" href="mailto:miika@mr-palvelut.fi"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mail"></use></svg>miika@mr-palvelut.fi</a>
                                 </li>
                             </ul>
-                            <p class="article__description">Tammijuuri on ystävällinen ja ihmisläheinen maalausliike Helsingistä.
-                                Keskityn pääasiassa asuinhuoneistojen ja pienten liiketilojen pintakäsittelyyn. Toiminta-alueeni
-                                on pääosin pääkaupunkiseudulla. Maalarin palveluiden lisäksi teen myös tapetoinnit, laminaattilattioiden
-                                asennukset, nauhoitus-, tasoite-, ja verkotustyöt sekä pienet ulkomaalaustyöt ammattitaidolla ja
-                                asiakkaiden toiveiden ehdolla. Maalauspalvelussani huomioin ympäristön ja luonnon muun muassa
-                                kierrättämällä kaiken mahdollisen työstä aiheutuvan jätteen ja käyttämällä ympäristöystävällisiä
-                                tarvikkeita ja materiaaleja.</p>
+                            <p class="article__description">Olemme pääkaupunkiseudulla toimiva monipuolisia remontti-, maalaus- ja kiinteistöhuoltopalveluja tarjoava yritys.
+                                Pitkä kokemus erilaisista saneerauskohteista, sekä sopiva sekoitus pohjalaisuutta ja Keski-Suomea taustana, takaa laadukkaan työn ja laajan tietotaidon!
+                            </p>
                             <ul class="article__tags">
-                                <li class="article__tag-item">Terassit</li>
-                                <li class="article__tag-item">Katot</li>
-                                <li class="article__tag-item">Puujulkisivut</li>
-                                <li class="article__tag-item">Tasoitustyöt</li>
-                                <li class="article__tag-item">Sisämaalaukset</li>
-                                <li class="article__tag-item">Lattiat</li>
-                                <li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
+                                <li class="article__tag-item">Terassit</li><!--
+                                --><li class="article__tag-item">Katot</li><!--
+                                --><li class="article__tag-item">Puujulkisivut</li><!--
+                                --><li class="article__tag-item">Tasoitustyöt</li><!--
+                                --><li class="article__tag-item">Sisämaalaukset</li><!--
+                                --><li class="article__tag-item">Lattiat</li><!--
+                                --><li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
                             </ul>
                         </div>
                         <div class="article__action">
                             <button class="article__request-btn">Pyydä tarjous!</button>
                             <div class="article__works works-counter">
-                                <img class="works-counter__icon">
-                                <span class="works-counter__number">11</span>
+                                <svg class="works-counter__icon" width="14" height="16"><use xlink:href="../img/sprite.svg#icon-house"></use></svg>
+                                <span class="works-counter__number">8</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="output__item article">
+                        <div class="article__img-container">
+                            <img class="article__img" src="img/painter03.jpg" srcset="img/painter03@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="article__content">
+                            <h3 class="article__heading"><a class="article__heading-link" href="https://tekijapankki.tikkurila.fi/company/maalausliike-tyyliv%c3%a4ri" target="_blank">Maalausliike Tyyliväri</a></h3>
+                            <ul class="article__contact-info">
+                                <li class="article__contact-item article__contact-item--location"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mark"></use></svg>HALIKKO</li>
+                                <li class="article__contact-item article__contact-item--phone">
+                                    <a class="article__contact-link" href="tel:+3580400617853"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-phone"></use></svg>+3580400617853</a>
+                                </li>
+                                <li class="article__contact-item">
+                                    <a class="article__contact-link" href="mailto:jukka.virtanen@tyylivari.fi"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mail"></use></svg>jukka.virtanen@tyylivari.fi</a>
+                                </li>
+                            </ul>
+                            <p class="article__description">Maalausliike Tyyliväri on vuonna 1995 perustettu maalausalan yritys. Palvelemme yritys- ja yksityisasiakkaita pääsääntöisesti rakennusalan maalaustarpeissa, sisä- ja ulkomaalaustöissä, mutta suoritamme myös pienemmät rakennetyöt, kalusteasennukset, väri- ja sisustussuunnitelmat. Kysy rohkeasti, voimmeko auttaa.
+                                Kotisivumme: tyylivari.fi
+                                Facebook: Maalausliike Tyyliväri
+                                Värikkäin terveisin: Jukka Virtanen</p>
+                            <ul class="article__tags">
+                                <li class="article__tag-item">Terassit</li><!--
+                                --><li class="article__tag-item">Katot</li><!--
+                                --><li class="article__tag-item">Puujulkisivut</li><!--
+                                --><li class="article__tag-item">Tasoitustyöt</li><!--
+                                --><li class="article__tag-item">Sisämaalaukset</li><!--
+                                --><li class="article__tag-item">Lattiat</li><!--
+                                --><li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
+                            </ul>
+                        </div>
+                        <div class="article__action">
+                            <button class="article__request-btn">Pyydä tarjous!</button>
+                            <div class="article__works works-counter">
+                                <svg class="works-counter__icon" width="14" height="16"><use xlink:href="../img/sprite.svg#icon-house"></use></svg>
+                                <span class="works-counter__number">15</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="output__item article">
+                        <div class="article__img-container">
+                            <img class="article__img" src="img/painter04.jpg" srcset="img/painter04@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="article__content">
+                            <h3 class="article__heading"><a class="article__heading-link" href="https://tekijapankki.tikkurila.fi/company/maalaus-pitk%c3%a4nen-oy" target="_blank">Maalaus Pitkänen Oy</a></h3>
+                            <ul class="article__contact-info">
+                                <li class="article__contact-item article__contact-item--location"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mark"></use></svg>HELSINKI</li>
+                                <li class="article__contact-item article__contact-item--phone">
+                                    <a class="article__contact-link" href="tel:+358407350437"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-phone"></use></svg>+358407350437</a>
+                                </li>
+                                <li class="article__contact-item">
+                                    <a class="article__contact-link" href="mailto:matias.pitkanen@maalauspitkanen.fi"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mail"></use></svg>matias.pitkanen@maalauspitkanen.fi</a>
+                                </li>
+                            </ul>
+                            <p class="article__description"></p>
+                            <ul class="article__tags">
+                                <li class="article__tag-item">Terassit</li><!--
+                                --><li class="article__tag-item">Katot</li><!--
+                                --><li class="article__tag-item">Puujulkisivut</li><!--
+                                --><li class="article__tag-item">Tasoitustyöt</li><!--
+                                --><li class="article__tag-item">Sisämaalaukset</li><!--
+                                --><li class="article__tag-item">Lattiat</li><!--
+                                --><li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
+                            </ul>
+                        </div>
+                        <div class="article__action">
+                            <button class="article__request-btn">Pyydä tarjous!</button>
+                            <div class="article__works works-counter">
+                                <svg class="works-counter__icon" width="14" height="16"><use xlink:href="../img/sprite.svg#icon-house"></use></svg>
+                                <span class="works-counter__number">16</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="output__item article">
+                        <div class="article__img-container">
+                            <img class="article__img" src="img/painter05.jpg" srcset="img/painter05@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="article__content">
+                            <h3 class="article__heading"><a class="article__heading-link" href="https://tekijapankki.tikkurila.fi/company/tasoite-ja-maalaus-moilanen-oy" target="_blank">Tasoite ja Maalaus Moilanen Oy</a></h3>
+                            <ul class="article__contact-info">
+                                <li class="article__contact-item article__contact-item--location"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mark"></use></svg>TAMPERE</li>
+                                <li class="article__contact-item article__contact-item--phone">
+                                    <a class="article__contact-link" href="tel:+358445512348"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-phone"></use></svg>+358445512348</a>
+                                </li>
+                                <li class="article__contact-item">
+                                    <a class="article__contact-link" href="mailto:jarmo.moilanen@kotikone.fi"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mail"></use></svg>jarmo.moilanen@kotikone.fi</a>
+                                </li>
+                            </ul>
+                            <p class="article__description">Olemme erikoistuneet yksilöllisiin pientaloihin. Sisäpuoliset tasoite - ja maalaustyöt Julkisivurappaukset.</p>
+                            <ul class="article__tags">
+                                <li class="article__tag-item">Terassit</li><!--
+                                --><li class="article__tag-item">Katot</li><!--
+                                --><li class="article__tag-item">Puujulkisivut</li><!--
+                                --><li class="article__tag-item">Tasoitustyöt</li><!--
+                                --><li class="article__tag-item">Sisämaalaukset</li><!--
+                                --><li class="article__tag-item">Lattiat</li><!--
+                                --><li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
+                            </ul>
+                        </div>
+                        <div class="article__action">
+                            <button class="article__request-btn">Pyydä tarjous!</button>
+                            <div class="article__works works-counter">
+                                <svg class="works-counter__icon" width="14" height="16"><use xlink:href="../img/sprite.svg#icon-house"></use></svg>
+                                <span class="works-counter__number">23</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="output__item article">
+                        <div class="article__img-container">
+                            <img class="article__img" src="img/painter06.jpg" srcset="img/painter06@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="article__content">
+                            <h3 class="article__heading"><a class="article__heading-link" href="https://tekijapankki.tikkurila.fi/company/asennuspalvelu-mm-toivonen" target="_blank">Asennuspalvelu M&M Toivonen</a></h3>
+                            <ul class="article__contact-info">
+                                <li class="article__contact-item article__contact-item--location"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mark"></use></svg>ROVANIEMI</li>
+                                <li class="article__contact-item article__contact-item--phone">
+                                    <a class="article__contact-link" href="tel:+358407350437"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-phone"></use></svg>+358407350437</a>
+                                </li>
+                                <li class="article__contact-item">
+                                    <a class="article__contact-link" href="mailto:miikka.toivonen@remonttipalvelu.com"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mail"></use></svg>miikka.toivonen@remonttipalvelu.com</a>
+                                </li>
+                            </ul>
+                            <p class="article__description">Erikoisosaamistamme on viimeistellyt julkisivuremontit sekä erikoispinnoitetyöt ja erikoismaalaukset. Teemme huolella myös kaikenlaiset muut maalaus-, asennus sekä rakennustyöt.</p>
+                            <ul class="article__tags">
+                                <li class="article__tag-item">Terassit</li><!--
+                                --><li class="article__tag-item">Katot</li><!--
+                                --><li class="article__tag-item">Puujulkisivut</li><!--
+                                --><li class="article__tag-item">Tasoitustyöt</li><!--
+                                --><li class="article__tag-item">Sisämaalaukset</li><!--
+                                --><li class="article__tag-item">Lattiat</li><!--
+                                --><li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
+                            </ul>
+                        </div>
+                        <div class="article__action">
+                            <button class="article__request-btn">Pyydä tarjous!</button>
+                            <div class="article__works works-counter">
+                                <svg class="works-counter__icon" width="14" height="16"><use xlink:href="../img/sprite.svg#icon-house"></use></svg>
+                                <span class="works-counter__number">42</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="output__item article">
+                        <div class="article__img-container">
+                            <img class="article__img" src="img/painter07.jpg" srcset="img/painter071@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="article__content">
+                            <h3 class="article__heading"><a class="article__heading-link" href="https://tekijapankki.tikkurila.fi/company/maalausliike-jv-arvola" target="_blank">Maalausliike JV Arvola</a></h3>
+                            <ul class="article__contact-info">
+                                <li class="article__contact-item article__contact-item--location"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mark"></use></svg>VANTAA</li>
+                                <li class="article__contact-item article__contact-item--phone">
+                                    <a class="article__contact-link" href="tel:+357777350437"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-phone"></use></svg>+357777350437</a>
+                                </li>
+                                <li class="article__contact-item">
+                                    <a class="article__contact-link" href="mailto:myynti@ulkomaalaukset.fi"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mail"></use></svg>myynti@ulkomaalaukset.fi</a>
+                                </li>
+                            </ul>
+                            <p class="article__description"> Kun laatu, luotettavuus ja vastuullisuus ovat hakusanoja kilpailulle, otathan yhteyttä. Hinta koostuu tehdystä työstä sopimuksen mukaisesti myös urakalla.
+                                Olemme keskittyneet peltikattojen huoltomaalauksiin, ensimaalauksiin ja korjausmaalauksiin sekä puujulkisivumaalauksiin. Vanhat käsi-ja konesaumatut jalkaränneillä varustetut peltikatot ovat mieluisia kunnostaa, koska ne kestävät huollettuna läpi rakennuksen eliniän.
+                                Vanhojen rakennusten puuvuoret ovat myös ikuista ja valikoitua materiaalia huollettuna asianmukaisesti. Lahovauriot puujulkisivussa korjataan aina. Hirsikorjaukset onnistuvat myös yhteistyökumppanin kanssa.
+                                Käytän myös märkähiekkapuhallusta luonnonhiekalla kohteen niin vaatiessa esim. bitumialumiinimaalien poistoon. Suurin osa töistäni tulee vanhojen töiden perusteella. Maalarimestarin paperit sain vuonna 2009 Suomen suurlähetystössä Berliinissä ja mestarintyöt käsittelivät peltikattoja ja talonmaalauksia. Korkeapainepesut, homepoistot ja muovipinnoitekattojen ruiskumaalaukset onnistuvat myös omalla laitteistolla perinteisiä menetelmiä unohtamatta.
+                                Soita niin katsotaan yhdessä mikä on talollesi parasta tehdä . Helsingissä teen noin viidesosan töistäni ja loput Pirkanmaalla.
+                                Emme vaihda hyväksi koettuja materiaaleja kotisi ympäriltä vaan kunnostamme ne kestämään seuraavat 50 vuotta. </p>
+                            <ul class="article__tags">
+                                <li class="article__tag-item">Terassit</li><!--
+                                --><li class="article__tag-item">Katot</li><!--
+                                --><li class="article__tag-item">Puujulkisivut</li><!--
+                                --><li class="article__tag-item">Tasoitustyöt</li><!--
+                                --><li class="article__tag-item">Sisämaalaukset</li><!--
+                                --><li class="article__tag-item">Lattiat</li><!--
+                                --><li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
+                            </ul>
+                        </div>
+                        <div class="article__action">
+                            <button class="article__request-btn">Pyydä tarjous!</button>
+                            <div class="article__works works-counter">
+                                <svg class="works-counter__icon" width="14" height="16"><use xlink:href="../img/sprite.svg#icon-house"></use></svg>
+                                <span class="works-counter__number">0</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="output__item article">
+                        <div class="article__img-container">
+                            <img class="article__img" src="img/painter08.jpg" srcset="img/painter08@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="article__content">
+                            <h3 class="article__heading"><a class="article__heading-link" href="https://tekijapankki.tikkurila.fi/company/helsingin-asiantuntijamaalaus-oy" target="_blank">Helsingin Asiantuntijamaalaus Oy</a></h3>
+                            <ul class="article__contact-info">
+                                <li class="article__contact-item article__contact-item--location"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mark"></use></svg>HELSINKI</li>
+                                <li class="article__contact-item article__contact-item--phone">
+                                    <a class="article__contact-link" href="tel:+358407366437"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-phone"></use></svg>+358407366437</a>
+                                </li>
+                                <li class="article__contact-item">
+                                    <a class="article__contact-link" href="mailto:asiantuntijamaalaus@gmail.com"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mail"></use></svg>asiantuntijamaalaus@gmail.com</a>
+                                </li>
+                            </ul>
+                            <p class="article__description">Helsingin Asiantuntijamaalaus Oy maalaa-ja korjausrakentaa julkisivuja, rappukäytäviä,
+                                kellareita, saunoja, toimistoja ja asuntoja.
+                                Olemme toimineet vuodesta 2008.</p>
+                            <ul class="article__tags">
+                                <li class="article__tag-item">Terassit</li><!--
+                                --><li class="article__tag-item">Katot</li><!--
+                                --><li class="article__tag-item">Puujulkisivut</li><!--
+                                --><li class="article__tag-item">Tasoitustyöt</li><!--
+                                --><li class="article__tag-item">Sisämaalaukset</li><!--
+                                --><li class="article__tag-item">Lattiat</li><!--
+                                --><li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
+                            </ul>
+                        </div>
+                        <div class="article__action">
+                            <button class="article__request-btn">Pyydä tarjous!</button>
+                            <div class="article__works works-counter">
+                                <svg class="works-counter__icon" width="14" height="16"><use xlink:href="../img/sprite.svg#icon-house"></use></svg>
+                                <span class="works-counter__number">0</span>
                             </div>
                         </div>
                     </article>
