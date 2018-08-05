@@ -135,6 +135,7 @@
     font-weight: $regular;
     font-size: $fs-small;
     background-color: $c-white;
+    line-height: 1;
     @include button ($c-green-dark);
 
     &:hover {

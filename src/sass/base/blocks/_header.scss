@@ -43,7 +43,29 @@
           color: $c-white;
           transition: all .3s;
         }
+
+        & .header__request-btn-num {
+
+          @media (min-width: $not-mob) {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            font-weight: $regular;
+            color: $c-main;
+            background-color: $c-white;
+            border-radius: 50%;
+            right: 10px;
+            opacity: 1;
+            display: inline-block;
+            margin-left: 10px;
+            line-height: 1.7;
+          }
+        }
       }
     }
+  }
+
+  &__request-btn-num {
+    font-weight: $black;
   }
 }

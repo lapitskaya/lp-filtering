@@ -99,6 +99,23 @@ body {
         color: #ffffff;
         -webkit-transition: all .3s;
         transition: all .3s; } }
+  @media (min-width: 700px) and (min-width: 700px) {
+    .header__request-btn--active .header__request-btn-num {
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #4f4f4f;
+      background-color: #ffffff;
+      border-radius: 50%;
+      right: 10px;
+      opacity: 1;
+      display: inline-block;
+      margin-left: 10px;
+      line-height: 1.7; } }
+
+.header__request-btn-num {
+  font-weight: 700; }
 
 .header-top {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(29%, #ffffff), color-stop(37%, #fdfdfd), color-stop(86%, #e7e6e6), to(#e2e2e1));
@@ -860,6 +877,7 @@ body {
     font-weight: 400;
     font-size: 14.4px;
     background-color: #ffffff;
+    line-height: 1;
     cursor: pointer;
     text-align: center;
     padding: 3px 11px;
