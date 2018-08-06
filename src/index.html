@@ -44,30 +44,98 @@
                         </ul>
                     </nav>
 
-                    <button class="header__request-btn">Pyydä tarjous<span class="header__request-btn-num"></span></button>
+                    <button class="header__request-btn js-popup-open">Pyydä tarjous<span class="header__request-btn-num"></span></button>
 
-                    <div class="request-modal">
-                        <header class="request-modal__header">
-                            <h2 class="request-modal__heading">Pyydä tarjous</h2>
-                            <ul class="request-modal__steps">
-                                <li class="request-modal__step1">Valitse tekijät</li>
-                                <li class="request-modal__step2">Tarjouspyyntö</li>
-                            </ul>
-                            <button class="request-modal__x">x</button>
-                        </header>
-                        <div class="request-modal__content">
-                            <p class="request-modal__paragraph">Voit valita korkeintaan kolme tekijää listaltasi ja lähettää heille tarjouspyynnön.</p>
-                            <!-- full modal functionality can be completed further by request -->
-                            <button class="request-modal__submit-btn" type="submit">Seuraava</button>
+                    <div class="modal">
+                        <div class="modal__overlay">
+                            <div class="modal__popup">
+                                <button class="modal__x" onclick="$('.modal').removeClass('modal--recover')">×</button>
+                                <header class="modal__header">
+                                    <h2 class="modal__heading">Pyydä tarjous</h2>
+                                    <ol class="modal__steps">
+                                        <li class="modal__step modal__step--active modal__step--one">Valitse tekijät</li>
+                                        <li class="modal__step modal__step--two">Tarjouspyyntö</li>
+                                    </ol>
+                                </header>
+                                <div class="modal__content">
+                                    <p class="modal__paragraph">Voit valita korkeintaan kolme tekijää listaltasi ja lähettää heille tarjouspyynnön.</p>
+                                    <div class="modal__insert-step-one">
+                                        <div class="modal__s-one-item js-modal-item" data-popup-placeholder="1">
+                                            <div class="modal__item-img-container" data-popup="img">
+                                                <img class="article__img" src="img/painter01.jpg" srcset="img/painter01@2x.jpg 2x" alt="" data-el="img">
+                                            </div>
+                                            <div class="modal__item-content">
+                                                <h3 class="modal__item-heading" data-popup="heading">Tammijuuri</h3>
+                                                <div class="modal__item-location" data-popup="location">HELSINKI</div>
+                                                <ul class="modal__item-tags" data-popup="tags">
+                                                    <li class="article__tag-item">Terassit</li><!--
+                                                 --><li class="article__tag-item">Puujulkisivut</li><!--
+                                                 --><li class="article__tag-item">Tasoitustyöt</li><!--
+                                                 --><li class="article__tag-item">Sisämaalaukset</li><!--
+                                                 --><li class="article__tag-item">Lattiat</li><!--
+                                                 --><li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
+                                                </ul>
+                                            </div>
+                                            <button class="modal__remove-btn" onclick="$(this).closest('.modal__s-one-item').hide();">
+                                                <svg class="modal__remove-icon" width="16" height="16"><use xlink:href="../img/sprite.svg#icon-remove"></use></svg>
+                                            </button>
+                                        </div>
+                                        <div class="modal__s-one-item js-modal-item" data-popup-placeholder="2">
+                                            <div class="modal__item-img-container" data-popup="img">
+                                                <img class="article__img" src="img/painter01.jpg" srcset="img/painter01@2x.jpg 2x" alt="" data-el="img">
+                                            </div>
+                                            <div class="modal__item-content">
+                                                <h3 class="modal__item-heading" data-popup="heading">Tammijuuri</h3>
+                                                <div class="modal__item-location" data-popup="location">HELSINKI</div>
+                                                <ul class="modal__item-tags" data-popup="tags">
+                                                    <li class="article__tag-item">Terassit</li><!--
+                                                 --><li class="article__tag-item">Puujulkisivut</li><!--
+                                                 --><li class="article__tag-item">Tasoitustyöt</li><!--
+                                                 --><li class="article__tag-item">Sisämaalaukset</li><!--
+                                                 --><li class="article__tag-item">Lattiat</li><!--
+                                                 --><li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
+                                                </ul>
+                                            </div>
+                                            <button class="modal__remove-btn" onclick="$(this).closest('.modal__s-one-item').hide();">
+                                                <svg class="modal__remove-icon" width="16" height="16"><use xlink:href="../img/sprite.svg#icon-remove"></use></svg>
+                                            </button>
+                                        </div>
+                                        <div class="modal__s-one-item js-modal-item" data-popup-placeholder="3">
+                                            <div class="modal__item-img-container" data-popup="img">
+                                                <img class="article__img" src="img/painter01.jpg" srcset="img/painter01@2x.jpg 2x" alt="" data-el="img">
+                                            </div>
+                                            <div class="modal__item-content">
+                                                <h3 class="modal__item-heading" data-popup="heading">Tammijuuri</h3>
+                                                <div class="modal__item-location" data-popup="location">HELSINKI</div>
+                                                <ul class="modal__item-tags" data-popup="tags">
+                                                    <li class="article__tag-item">Terassit</li><!--
+                                                 --><li class="article__tag-item">Puujulkisivut</li><!--
+                                                 --><li class="article__tag-item">Tasoitustyöt</li><!--
+                                                 --><li class="article__tag-item">Sisämaalaukset</li><!--
+                                                 --><li class="article__tag-item">Lattiat</li><!--
+                                                 --><li class="article__tag-item">Ovet ikkunat ja kalusteet</li>
+                                                </ul>
+                                            </div>
+                                            <button class="modal__remove-btn" onclick="$(this).closest('.modal__s-one-item').hide();">
+                                                <svg class="modal__remove-icon" width="16" height="16"><use xlink:href="../img/sprite.svg#icon-remove"></use></svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="modal__submit-btn-container">
+                                        <button class="modal__submit-btn" type="submit">Seuraava</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </header>
 
 
-    <main role="main">
+    <main class="main" role="main">
 
         <form>
             <div class="form-top">
@@ -158,12 +226,12 @@
 
                     <article class="output__item article">
                         <div class="article__img-container">
-                            <img class="article__img" src="img/painter01.jpg" srcset="img/painter01@2x.jpg 2x" alt="">
+                            <img class="article__img" src="img/painter01.jpg" srcset="img/painter01@2x.jpg 2x" alt="" data-el="img">
                         </div>
                         <div class="article__content">
-                            <h3 class="article__heading"><a class="article__heading-link" href="https://tekijapankki.tikkurila.fi/company/tammijuuri" target="_blank">Tammijuuri</a></h3>
+                            <h3 class="article__heading"><a class="article__heading-link" href="https://tekijapankki.tikkurila.fi/company/tammijuuri" target="_blank" data-el="heading">Tammijuuri</a></h3>
                             <ul class="article__contact-info">
-                                <li class="article__contact-item article__contact-item--location"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mark"></use></svg>HELSINKI</li>
+                                <li class="article__contact-item article__contact-item--location"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-mark"></use></svg><span data-el="location">HELSINKI</span></li>
                                 <li class="article__contact-item article__contact-item--phone">
                                     <a class="article__contact-link" href="tel:+358407350437"><svg class="article__icon" width="18" height="16"><use xlink:href="../img/sprite.svg#icon-phone"></use></svg>+358407350437</a>
                                 </li>
@@ -178,7 +246,7 @@
                                 asiakkaiden toiveiden ehdolla. Maalauspalvelussani huomioin ympäristön ja luonnon muun muassa
                                 kierrättämällä kaiken mahdollisen työstä aiheutuvan jätteen ja käyttämällä ympäristöystävällisiä
                                 tarvikkeita ja materiaaleja.</p>
-                            <ul class="article__tags" data-tag="ter kat puu tas sis lat ove">
+                            <ul class="article__tags" data-tag="ter kat puu tas sis lat ove" data-el="tags">
                                 <li class="article__tag-item">Terassit</li><!--
                                 --><li class="article__tag-item">Katot</li><!--
                                 --><li class="article__tag-item">Puujulkisivut</li><!--

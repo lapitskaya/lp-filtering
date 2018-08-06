@@ -72,6 +72,7 @@ $(document).ready(function () {
         if ($(this).hasClass('article__request-btn--active')) {
             $(this).html('Pyydä tarjous!');
             btnCounter -= 1;
+            //clearModalItem(btnCounter);
             if (btnCounter == 0) {
                 $('.header__request-btn-num').html('');
             }
@@ -79,6 +80,7 @@ $(document).ready(function () {
         } else if (btnCounter < 3) {
             $(this).html('✔ Lisätty listalle');
             btnCounter += 1;
+            //addModalItem(btnCounter, this);
             $(this).toggleClass('article__request-btn--active');
         }
         if ($('.article__request-btn').is('.article__request-btn--active')) {
@@ -93,5 +95,79 @@ $(document).ready(function () {
         }
         return false;
     });
+
+    //popup activation
+    $('.js-popup-open').on('click', function() {
+        if ($(this).hasClass('header__request-btn--active')) {
+            $('.modal').addClass('modal--recover');
+        }
+    });
+
+    //check popup btn status
+    $('.js-modal-item').on('click', function() {
+        if ($('.js-modal-item').is(':visible')) {
+            $('.modal__submit-btn').prop( 'disabled', false );
+        } else {
+            $('.modal__submit-btn').prop( 'disabled', true );
+        }
+    });
+
+    //remove content of unchecked article from popup
+    //function clearModalItem(num) {
+    //    $('.js-modal-item').each(function () {
+    //        var item = $(this);
+    //        var itemVal = $(item).attr('data-popup-placeholder');
+    //
+    //        if (itemVal == num) {
+    //            $(this).find('[data-popup]').html('');
+    //        }
+    //    });
+    //}
+
+    //add content of checked article to popup
+    //function addModalItem(num, btnChecked) {
+    //    var placeholder;
+    //    switch (num) {
+    //        case '1':
+    //            placeholder = $('div [data-popup-placeholder="1"]');
+    //            break;
+    //        case '2':
+    //            placeholder = $('div [data-popup-placeholder="2"]');
+    //            break;
+    //        case '3':
+    //            placeholder = $('div [data-popup-placeholder="3"]');
+    //            break;
+    //        default:
+    //            break;
+    //    }
+    //
+    //    var pImg = placeholder.find('[data-popup="img"]');
+    //    var pHeading = placeholder.find('[data-popup="heading"]');
+    //    var pLocation = placeholder.find('[data-popup="location"]');
+    //    var pTags = placeholder.find('[data-popup="tags"]');
+    //
+    //    var article = $(btnChecked).closest('.article');
+    //
+    //    $(article).find('[data-el]').each(function () {
+    //        var dataEl = $(this);
+    //
+    //        switch (dataEl.attr('data-el')) {
+    //            case 'img':
+    //                $(this).clone().appendTo(pImg);
+    //                break;
+    //            case 'heading':
+    //                $(this).clone().appendTo(pHeading);
+    //                break;
+    //            case 'location':
+    //                $(this).clone().appendTo(pLocation);
+    //                break;
+    //            case 'tags':
+    //                $(this).clone().appendTo(pTags);
+    //                break;
+    //            default:
+    //                break;
+    //        }
+    //    });
+    //}
 
 });
