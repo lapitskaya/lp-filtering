@@ -143,6 +143,35 @@ $(document).ready(function () {
         possibleScroll();
     });
 
+    //searching field
+    $('#searchSubmit').click(function () {
+        var qValue = $.trim($('#searchField').val());
+        $('[data-f-tag]').removeClass('.js-f-tag-active');
+        $('.output__no-result').hide();
+        $('.article').show();
+        if (qValue != "") {
+            $('.article').each(function () {
+                var tagElAttr = $(this).find('.article__description').html();
+                var n = tagElAttr.search(qValue);
+                if (n == -1) {
+                    $(this).closest('.article').hide();
+                }
+            });
+        }
+        else {
+            $('.article').show();
+            $('.output__no-result').hide();
+        }
+        return false;
+    });
+
+    $('#searchField').keypress(function (e) {
+        if (e.which == 13) {//Enter key pressed
+            $('#searchSubmit').click();
+            return false;
+        }
+    });
+
 
     //remove content of unchecked article from popup
     //function clearModalItem(num) {
@@ -151,7 +180,7 @@ $(document).ready(function () {
     //        var itemVal = $(item).attr('data-popup-placeholder');
     //
     //        if (itemVal == num) {
-    //            $(this).find('[data-popup]').html('');
+    //            $(this).search('[data-popup]').html('');
     //        }
     //    });
     //}
@@ -173,14 +202,14 @@ $(document).ready(function () {
     //            break;
     //    }
     //
-    //    var pImg = placeholder.find('[data-popup="img"]');
-    //    var pHeading = placeholder.find('[data-popup="heading"]');
-    //    var pLocation = placeholder.find('[data-popup="location"]');
-    //    var pTags = placeholder.find('[data-popup="tags"]');
+    //    var pImg = placeholder.search('[data-popup="img"]');
+    //    var pHeading = placeholder.search('[data-popup="heading"]');
+    //    var pLocation = placeholder.search('[data-popup="location"]');
+    //    var pTags = placeholder.search('[data-popup="tags"]');
     //
     //    var article = $(btnChecked).closest('.article');
     //
-    //    $(article).find('[data-el]').each(function () {
+    //    $(article).search('[data-el]').each(function () {
     //        var dataEl = $(this);
     //
     //        switch (dataEl.attr('data-el')) {
