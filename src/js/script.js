@@ -100,6 +100,7 @@ $(document).ready(function () {
     $('.js-popup-open').on('click', function() {
         if ($(this).hasClass('header__request-btn--active')) {
             $('.modal').addClass('modal--recover');
+            preventContScroll();
         }
     });
 
@@ -111,6 +112,37 @@ $(document).ready(function () {
             $('.modal__submit-btn').prop( 'disabled', true );
         }
     });
+
+    //prevent content scrolling when modal opened
+    function preventContScroll() {
+        $('.js-content-no-scroll').addClass('no-scroll');
+        $('html').addClass('html-non-scroll');
+        $('body').addClass('html-non-scroll');
+        $('html').bind('scroll', (function (event) {
+            var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+            $('html').css('top', scrolled + 'px');
+        }));
+    }
+    function possibleScroll() {
+        $('.js-content-no-scroll').removeClass('no-scroll');
+        $('html').removeClass('html-non-scroll');
+        $('body').removeClass('html-non-scroll');
+    }
+    function ifShouldScroll() {
+        if ($('.js-content-no-scroll').hasClass('no-scroll')) {
+            preventContScroll();
+        } else {
+            possibleScroll();
+        }
+    }
+
+    ifShouldScroll();
+
+    $('.modal__x').on('click', function () {
+        $('.js-content-no-scroll').removeClass('no-scroll');
+        possibleScroll();
+    });
+
 
     //remove content of unchecked article from popup
     //function clearModalItem(num) {

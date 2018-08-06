@@ -14,3 +14,10 @@ body {
   z-index: 3;
   position: relative;
 }
+
+.html-non-scroll {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
